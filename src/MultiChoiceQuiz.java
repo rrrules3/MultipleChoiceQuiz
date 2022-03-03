@@ -412,6 +412,7 @@ public class MultiChoiceQuiz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //Variables are declared
         int correct;
         int score;
         int answer;
@@ -420,9 +421,14 @@ public class MultiChoiceQuiz extends javax.swing.JFrame {
         int answer4;
         int answer5;
         int percentage = 0;
+        score = 0;
+        
+        //constant is declared
         final int TOTAL_QUESTIONS = 5;
    
+        //IF statements to calculate score and display messages for the user
         score = 0;
+        
         answer = Integer.parseInt(txtQ1Answer.getText());
         if (answer == 4) { 
         lblQ1Out.setText("Correct!");
@@ -430,6 +436,7 @@ public class MultiChoiceQuiz extends javax.swing.JFrame {
         } else if (answer != 4) {
           lblQ1Out.setText("The answer was 4");
         }
+        
         answer2 = Integer.parseInt(txtQ2Answer.getText());
         if (answer2 == 1) {
         lblQ2Out.setText("Correct!");
@@ -437,6 +444,7 @@ public class MultiChoiceQuiz extends javax.swing.JFrame {
         } else if (answer2 != 1) {
           lblQ2Out.setText("The answer was 1");
         }
+        
         answer3 = Integer.parseInt(txtQ3Answer.getText());
         if (answer3 == 2) {
         lblQ3Out.setText("Correct!");
@@ -444,6 +452,7 @@ public class MultiChoiceQuiz extends javax.swing.JFrame {
         } else if (answer3 != 2) {
           lblQ3Out.setText("The answer was 2");
         }
+        
         answer4 = Integer.parseInt(txtQ4Answer.getText());
         if (answer4 == 3) {
         lblQ4Out.setText("Correct!");
@@ -451,6 +460,7 @@ public class MultiChoiceQuiz extends javax.swing.JFrame {
         } else if (answer4 != 3) {
           lblQ4Out.setText("The answer was 3");
         }
+        
         answer5 = Integer.parseInt(txtQ5Answer.getText());
         if (answer5 == 4) {
         lblQ5Out.setText("Correct!");
@@ -458,7 +468,10 @@ public class MultiChoiceQuiz extends javax.swing.JFrame {
         } else if (answer5 != 4) {
           lblQ5Out.setText("The answer was 4");
         }
+        
+    //Calculates the percentage and displays score 
     percentage = (score * 100) / TOTAL_QUESTIONS;
+    
     lblScorePerc.setText("" + percentage + "%");    
     lblScoreOutput.setText("" + score + "/" + TOTAL_QUESTIONS);
     }//GEN-LAST:event_jButton1ActionPerformed
